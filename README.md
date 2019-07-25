@@ -6,7 +6,7 @@ The ext2 is a file system for the Linux Kernel. This repository contains a set o
 -	**ext2_ln**: This program creates a link from the first specified file to the second specified path. It takes three command line arguments. The first is the name of an ext2 formatted virtual disk. The other two are absolute paths on your ext2 formatted disk. Additionally, it may take a “-s” flag, after the disk image argument. When this flag is used, the program creates a symlink instead.
 -	**ext2_rm**: This program removes the specified file from the disk. It takes two command line arguments. The first is the name of an ext2 formatted virtual disk, and the second is an absolute path to a file or link (not a directory) on that disk.
 -	**ext2_restore**: This program restores the specified file that has been previously removed. It takes two command line arguments. The first is the name of an ext2 formatted virtual disk, and the second is an absolute path to a file or link on that disk. 
--	**ext2_checker**: This program implements a file system checker, which detects a file system inconsistencies and takes appropriate actions to fix them (as well as counts the number of fixes). It takes one command line argument. 
+-	**ext2_checker**: This program implements a file system checker, which detects a file system inconsistencies and takes appropriate actions to fix them (as well as counts the number of fixes). It takes one command line argument: the name of an ext2 formatted virtual disk. 
 
 **DISK IMAGES SPECIFICATION**
 -	A disk is 128 blocks where the block size is 1024 bytes.
