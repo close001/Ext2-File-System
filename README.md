@@ -1,4 +1,4 @@
-**INTRODUCTION**
+**INTRODUCTION**\
 The ext2 is a file system for the Linux Kernel. This repository contains a set of programs that modify ext2-format virtual disks. 
 -	ext2_ cp: This program copies the file on your native file system onto the specified location on the disk. It takes three command line arguments. The first is the name of an ext2 formatted virtual disk. The second is the path to a file on your native operating system, and the third is an absolute path on your ext2 formatted disk. 
 -	ext2_mkdir: This program creates the final directory on the specified path on the disk. It takes two command line arguments. The first is the name of an ext2 formatted virtual disk. The second is an absolute path on your ext2 formatted disk.
@@ -12,31 +12,43 @@ The ext2 is a file system for the Linux Kernel. This repository contains a set o
 -	There is only one block group.
 -	There are 32 inodes.
 
-**PLAYING WITH VIRTUAL IMAGES USING THE PROGRAMS**
-To interface with virtual images (the images in images folder), you first need to mount the file system (instruction is provided below). Then you can use standards commands (mkdir, cp, rm, ln) to interact with these images. 
-Mounting a file system
-If you have root access on a Linux machine (or Linux virtual machine), you can use mount to mount the disk into your file system and to peruse its contents. (Note: this requires sudo, so you will need to do this on a machine (or virtual machine) that you administer. 
-You can also use a tool called fuse that allows you to mount a file system at user-level. 
-# create a directory in /tmp and go there
+**PLAYING WITH VIRTUAL IMAGES USING THE PROGRAMS**\
+To interface with virtual images (the images in images folder), you first need to mount the file system (instruction is provided below). Then you can use standards commands (_mkdir_, _cp_, _rm_, _ln_) to interact with these images.\
+
+**Mounting a file system**\
+If you have root access on a Linux machine (or Linux virtual machine), you can use mount to mount the disk into your file system and to peruse its contents. (Note: this requires _sudo_, so you will need to do this on a machine (or virtual machine) that you administer. 
+You can also use a tool called _fuse_ that allows you to mount a file system at user-level.\
+
+1. create a directory in /tmp and go there
+```
 mkdir –m 700 /tmp
 cd /tmp
+```
 
-# to create your own disk image
+2. create your own disk image
+```
 dd if=/dev/zero of=DISKNAME.img bs=1024 count=128
 /sbin/mke2fs –N 32 –F DISKNAME.img
+```
 
-# create a mount point and mount the image
-# Current working directory is /tmp
+3. create a mount point and mount the image
+#current working directory is /tmp
+```
 mkdir mnt
 fuseext2 –o rw+ DISKNAME.img mnt
+```
 
-# check to see if it is mounted
+4. check to see if it is mounted
+```
 df –hl
+```
 
-# now you can use the mounted file system, for example
+5. now you can use the mounted file system, for example
+```
 mkdir mnt/text
-
-# unmount the image
+```
+6. unmount the image
+```
 fusermount –u mnt
-
+```
 
