@@ -13,11 +13,11 @@ The ext2 is a file system for the Linux Kernel. This repository contains a set o
 -	There are 32 inodes.
 
 **PLAYING WITH VIRTUAL IMAGES USING THE PROGRAMS**\
-To interface with virtual images (the images in images folder), you first need to mount the file system (instruction is provided below). Then you can use standards commands (_mkdir_, _cp_, _rm_, _ln_) to interact with these images.\
+To interface with virtual images (the images in images folder), you first need to mount the file system (instruction is provided below). Then you can use standards commands (_mkdir_, _cp_, _rm_, _ln_) to interact with these images.
 
 **Mounting a file system**\
 If you have root access on a Linux machine (or Linux virtual machine), you can use mount to mount the disk into your file system and to peruse its contents. (Note: this requires _sudo_, so you will need to do this on a machine (or virtual machine) that you administer. 
-You can also use a tool called _fuse_ that allows you to mount a file system at user-level.\
+You can also use a tool called _fuse_ that allows you to mount a file system at user-level.
 
 1. Create a directory in /tmp and go there
 ```
