@@ -1,5 +1,4 @@
-INTRODUCTION
-
+**INTRODUCTION**
 The ext2 is a file system for the Linux Kernel. This repository contains a set of programs that modify ext2-format virtual disks. 
 -	ext2_ cp: This program copies the file on your native file system onto the specified location on the disk. It takes three command line arguments. The first is the name of an ext2 formatted virtual disk. The second is the path to a file on your native operating system, and the third is an absolute path on your ext2 formatted disk. 
 -	ext2_mkdir: This program creates the final directory on the specified path on the disk. It takes two command line arguments. The first is the name of an ext2 formatted virtual disk. The second is an absolute path on your ext2 formatted disk.
@@ -7,11 +6,13 @@ The ext2 is a file system for the Linux Kernel. This repository contains a set o
 -	ext2_rm: This program removes the specified file from the disk. It takes two command line arguments. The first is the name of an ext2 formatted virtual disk, and the second is an absolute path to a file or link (not a directory) on that disk.
 -	ext2_restore: This program restores the specified file that has been previously removed. It takes two command line arguments. The first is the name of an ext2 formatted virtual disk, and the second is an absolute path to a file or link on that disk. 
 -	ext2_checker: This program implements a file system checker, which detects a file system inconsistencies and takes appropriate actions to fix them (as well as counts the number of fixes). It takes one command line argument. 
-#DISK IMAGES SPECIFICATION
+
+**DISK IMAGES SPECIFICATION**
 -	A disk is 128 blocks where the block size is 1024 bytes.
 -	There is only one block group.
 -	There are 32 inodes.
-#PLAYING WITH VIRTUAL IMAGES USING THE PROGRAMS
+
+**PLAYING WITH VIRTUAL IMAGES USING THE PROGRAMS**
 To interface with virtual images (the images in images folder), you first need to mount the file system (instruction is provided below). Then you can use standards commands (mkdir, cp, rm, ln) to interact with these images. 
 Mounting a file system
 If you have root access on a Linux machine (or Linux virtual machine), you can use mount to mount the disk into your file system and to peruse its contents. (Note: this requires sudo, so you will need to do this on a machine (or virtual machine) that you administer. 
