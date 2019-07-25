@@ -45,7 +45,7 @@ df –hl
 
 5. Now you can use the mounted file system, for example
 ```
-mkdir mnt/text
+mkdir mnt/test
 ```
 6. Unmount the image once you are done
 ```
