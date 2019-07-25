@@ -2,7 +2,7 @@
 **INTRODUCTION**\
 The ext2 is a file system for the Linux Kernel. This repository contains a set of programs that modify ext2-format virtual disks.
 
-**PROGRAMS**\
+**PROGRAMS**
 -	**ext2_ cp**: This program copies the file on your native file system onto the specified location on the disk. It takes three command line arguments. The first is the name of an ext2 formatted virtual disk. The second is the path to a file on your native operating system, and the third is an absolute path on your ext2 formatted disk. 
 -	**ext2_mkdir**: This program creates the final directory on the specified path on the disk. It takes two command line arguments. The first is the name of an ext2 formatted virtual disk. The second is an absolute path on your ext2 formatted disk.
 -	**ext2_ln**: This program creates a link from the first specified file to the second specified path. It takes three command line arguments. The first is the name of an ext2 formatted virtual disk. The other two are absolute paths on your ext2 formatted disk. Additionally, it may take a “-s” flag, after the disk image argument. When this flag is used, the program creates a symlink instead.
